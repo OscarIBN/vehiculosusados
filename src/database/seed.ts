@@ -12,9 +12,9 @@ const seedData = async (): Promise<void> => {
     // Insert test users
     const usersQuery = `
       INSERT INTO users (email, password, first_name, last_name, role) VALUES
-      ('admin@micocheideal.com', $1, 'Admin', 'User', 'admin'),
-      ('sales@micocheideal.com', $1, 'Sales', 'User', 'sales'),
-      ('customer@micocheideal.com', $1, 'Customer', 'User', 'customer')
+          ('admin@vehiculosusados.com', $1, 'Admin', 'User', 'admin'),
+    ('sales@vehiculosusados.com', $1, 'Sales', 'User', 'sales'),
+    ('customer@vehiculosusados.com', $1, 'Customer', 'User', 'customer')
       ON CONFLICT (email) DO NOTHING
     `;
     
@@ -34,7 +34,7 @@ const seedData = async (): Promise<void> => {
     await pool.query(vehiclesQuery);
     
     // Get user and vehicle IDs for orders
-    const userResult = await pool.query('SELECT id FROM users WHERE email = $1', ['customer@micocheideal.com']);
+    const userResult = await pool.query('SELECT id FROM users WHERE email = $1', ['customer@vehiculosusados.com']);
     const vehicleResult = await pool.query('SELECT id FROM vehicles WHERE brand = $1 AND model = $2', ['Toyota', 'Corolla']);
     
     if (userResult.rows.length > 0 && vehicleResult.rows.length > 0) {

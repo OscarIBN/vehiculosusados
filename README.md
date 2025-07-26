@@ -1,6 +1,6 @@
-# Mi Coche Ideal API
+# Vehiculos Usados API
 
-Micro-servicio completo para la administración de inventario y venta de vehículos usados del concesionario ficticio "Mi Coche Ideal".
+Micro-servicio completo para la administración de inventario y venta de vehículos usados del concesionario ficticio "Vehiculos Usados".
 
 ## 🏗️ Arquitectura
 
@@ -80,7 +80,7 @@ npm install
 2. **Configurar base de datos**
 ```bash
 # Crear base de datos PostgreSQL
-createdb mi_coche_ideal
+createdb vehiculos_usados
 
 # Ejecutar migraciones
 npm run migrate
@@ -283,7 +283,7 @@ docker-compose logs   # Ver logs
 # Base de datos
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=mi_coche_ideal
+DB_NAME=vehiculos_usados
 DB_USER=postgres
 DB_PASSWORD=password
 

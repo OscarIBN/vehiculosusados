@@ -25,7 +25,7 @@ export class LoggerService {
     this.logger = winston.createLogger({
       level: logLevel,
       format,
-      defaultMeta: { service: 'mi-coche-ideal-api' },
+      defaultMeta: { service: 'vehiculos-usados-api' },
       transports: [
         new winston.transports.Console({
           format: winston.format.combine(

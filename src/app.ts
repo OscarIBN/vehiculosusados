@@ -29,7 +29,7 @@ app.use(helmet({
 
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://micocheideal.com'] 
+    ? ['https://vehiculosusados.com'] 
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true,
 }));
@@ -71,7 +71,7 @@ app.use(`/api/${apiVersion}`, healthRoutes);
 app.get('/', (req, res) => {
   res.json({
     success: true,
-    message: 'Mi Coche Ideal API',
+    message: 'Vehiculos Usados API',
     version: '1.0.0',
     environment: process.env.NODE_ENV,
     timestamp: new Date().toISOString(),

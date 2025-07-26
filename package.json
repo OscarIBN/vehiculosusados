@@ -1,5 +1,5 @@
 {
-  "name": "mi-coche-ideal-api",
+  "name": "vehiculos-usados-api",
   "version": "1.0.0",
   "description": "Micro-servicio para administración de inventario y venta de vehículos usados",
   "main": "dist/index.js",
@@ -22,7 +22,7 @@
     "vehicles",
     "dealership"
   ],
-  "author": "Mi Coche Ideal",
+  "author": "Vehiculos Usados",
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.1490.0",
